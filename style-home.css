@@ -1,0 +1,47 @@
+body {
+    background: linear-gradient(135deg, #ffb3c1, #a3d3f3); /* ชมพูและฟ้าพาสเทล */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    color: #ff66b2;
+    margin-bottom: 20px;
+}
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.next-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff80ab;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+.next-button:hover {
+    background-color: #ff4081;
+}

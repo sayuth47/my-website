@@ -1,0 +1,106 @@
+body {
+    background: linear-gradient(135deg, #ffdde1, #c3cfe2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #ff66b2;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-wrapper {
+    width: 50%;
+    margin-right: 20px;
+}
+
+img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.calendar {
+    width: 50%;
+}
+
+#calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#calendar td, #calendar th {
+    padding: 10px;
+    text-align: center;
+}
+
+#highlight {
+    background-color: #ffb6c1; /* สีชมพูอ่อน */
+    animation: blink 1s infinite; /* การกระพริบ */
+}
+
+@keyframes blink {
+    50% {
+        background-color: transparent;
+    }
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff80ab;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.back-button:hover, .next-button:hover {
+    background-color: #ff4081;
+}
+
+.love-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ff80ab; /* สีชมพูอ่อน */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.next-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff80ab;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}

@@ -1,0 +1,84 @@
+body {
+    background: linear-gradient(135deg, #ffdde1, #c3cfe2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+}
+
+h1 {
+    color: #ff66b2;
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.image-wrapper {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-slide {
+    width: 312px; /* ขนาดความกว้างเป็น 312px */
+    height: 553px; /* ขนาดความสูงเป็น 553px */
+    object-fit: cover; /* ทำให้รูปไม่บิดเบี้ยว */
+    display: none;
+}
+
+.message-box {
+    width: 45%;
+    font-size: 18px;
+    color: #ff80ab;
+    line-height: 1.6;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    white-space: pre-wrap; /* ทำให้ข้อความสามารถตัดบรรทัดได้ */
+    word-wrap: break-word;
+}
+
+.back-button {
+    margin-top: 30px;
+    padding: 12px 24px;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff80ab;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background-color: #ff4081;
+    transform: translateY(-2px);
+}

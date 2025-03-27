@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เค้ามีอะไรจะบอกบี๋บี๋</title>
+    <!-- ลิงก์ไปยังไฟล์ CSS ของหน้าแรก -->
+    <link rel="stylesheet" href="css/style-home.css">
+</head>
+<body>
+    <div class="container">
+        <h1>เค้ามีอะไรจะบอกบี๋บี๋💖</h1>
+        <div class="image-wrapper">
+            <img id="slideshow" src="images/l.jpg" alt="Love Image">
+        </div>
+        <button class="next-button" onclick="nextPage()">หน้าถัดไป</button>
+    </div>
+    <script>
+        const images = ["images/l.jpg", "images/l1.jpg", "images/l3.jpg"];
+        let index = 0;
+        
+        function changeImage() {
+            index = (index + 1) % images.length;
+            document.getElementById("slideshow").src = images[index];
+        }
+        setInterval(changeImage, 3000);
+
+        function nextPage() {
+            window.location.href = "next.html";
+        }
+    </script>
+</body>
+</html>

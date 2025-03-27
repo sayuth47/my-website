@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page3</title>
+    <link rel="stylesheet" href="css/style-page3.css">
+</head>
+<body>
+    <div class="container">
+        <!-- หัวข้อ -->
+        <h1>💖เค้ามีความในใจจะบอกบี๋บี๋💖</h1>
+
+        <!-- เนื้อหาหลัก -->
+        <div class="content">
+            <!-- รูปภาพ -->
+            <div class="image-wrapper">
+                <img class="image-slide" src="images/e.jpg" alt="Image 1">
+                <img class="image-slide" src="images/e1.jpg" alt="Image 2">
+                <img class="image-slide" src="images/e2.jpg" alt="Image 3">
+                <img class="image-slide" src="images/e3.jpg" alt="Image 4">
+                <img class="image-slide" src="images/e4.jpg" alt="Image 5">
+                <img class="image-slide" src="images/e5.jpg" alt="Image 6">
+            </div>
+
+            <!-- ข้อความ -->
+            <div class="message-box">
+                <p>💖 รักบี๋บี๋นะคะ ตั้งแต่วันแรกจนปัจจุบันไม่เคยมีวันไหนไม่รักหรือไม่คิดถึงบี๋บี๋เลยสักวันเดียว อยากอยู่กับบี๋บี๋ตลอดเวลาและรักบี๋บี๋มากๆนะคะ บางทีเค้าอาจจะทำให้บี๋บี๋โกรธหรืองอนไปบ้าง เค้าขอโทษนะคะ แต่เค้าไม่คิดที่จะทำให้บี๋บี๋รู้สึกงั้น เค้าจะไม่ปล่อยมือบี๋บี๋ไปไหนทั้งงั้น ท้ายงี้เค้าจะไม่นอกใจบี๋บี๋ เค้าจะรักและเครพบี๋บี๋แค่คนเดียว รักบี๋บี๋นะคับ จุ๊บมั๊วะ💖 </p>
+            </div>
+        </div>
+
+        <!-- ปุ่มกลับไปหน้าที่ 2 -->
+        <button class="back-button" onclick="goBack()">กลับไปหน้าที่ 2</button>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll(".image-slide");
+        const totalImages = images.length;
+
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateImageDisplay();
+        }
+
+        function showPreviousImage() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateImageDisplay();
+        }
+
+        function updateImageDisplay() {
+            images.forEach((image, index) => {
+                image.style.display = index === currentIndex ? "block" : "none";
+            });
+        }
+
+        // Initial display
+        updateImageDisplay();
+
+        // Set interval to automatically switch images
+        setInterval(showNextImage, 3000);
+
+        // Back button function
+        function goBack() {
+            window.location.href = "next.html";  // ลิงค์ไปหน้าที่ 2
+        }
+    </script>
+</body>
+</html>

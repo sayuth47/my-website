@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าถัดไป</title>
+    <link rel="stylesheet" href="css/style-next.css">
+</head>
+<body>
+    <div class="container">
+        <h1>รักบี๋บี๋นะคะ 💖</h1>
+        <div class="content">
+            <div class="image-wrapper">
+                <img id="slideshow" src="images/n.jpg" alt="Image 1">
+            </div>
+            <div class="calendar">
+                <table id="calendar">
+                    <thead>
+                        <tr>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                            <th>Sun</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>1</td> <!-- 1 มกราคม 2568 เริ่มที่วันพุธ -->
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td id="highlight">11</td> <!-- วันที่ 11 มกราคม -->
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- ข้อความบอกรักใต้ปฏิทิน -->
+                <div class="love-message">
+                    <p>วันนี้กลายเป็นวันสำคัญในชีวิตเค้าไปแล้ว งื้อออ รักบี๋บี๋ที่สุดด!! มีต่ออีกหน้านะ 💖</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ปุ่ม "กลับไปหน้าแรก" -->
+        <button class="back-button" onclick="goBack()">กลับไปหน้าแรก</button> 
+
+        <!-- ปุ่ม "หน้าถัดไป" -->
+        <button class="next-button" onclick="window.location.href='page3.html'">หน้าถัดไป</button>
+        
+    </div>
+    
+    <script>
+        const images = ["images/n.jpg", "images/n1.jpg", "images/n2.jpg", "images/n3.jpg"];
+        let index = 0;
+
+        function changeImage() {
+            index = (index + 1) % images.length;
+            document.getElementById("slideshow").src = images[index];
+        }
+        setInterval(changeImage, 3000);
+
+        function goBack() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
